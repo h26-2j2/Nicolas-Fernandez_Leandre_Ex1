@@ -10,9 +10,9 @@ public class DeplacementJoueur : MonoBehaviour
     public float vitesseRotation = 180;
 
     [Header("Limites de la zone d'arrivée")]
-    public float positionZoneX = 8f;
-    public float positionZoneMinY = -3f;
-    public float positionZoneMaxY = 3f;
+    public float positionZoneX = 16f;
+    public float positionZoneMinY = -6f;
+    public float positionZoneMaxY = 6f;
     GameObject zoneArrivee;
 
     void Start()
@@ -65,7 +65,7 @@ public class DeplacementJoueur : MonoBehaviour
 
         //On bloque la position pour éviter de sortir de l'écran
         //Mathf.Clamp limite une valeur entre 2 points
-        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -8, 8), Mathf.Clamp(transform.position.y, -4, 4));
+        transform.position = new Vector2(Mathf.Clamp(transform.position.x, -16, 16), Mathf.Clamp(transform.position.y, -8, 8));
 
 
         //Vérification de la collision avec la zone d'arrivée
